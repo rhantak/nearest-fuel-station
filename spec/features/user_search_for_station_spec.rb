@@ -12,11 +12,11 @@ RSpec.describe 'As a user' do
         expect(current_path).to eq("/search")
       end
 
-      xit "I should see the nearest fuel station" do
-        #name
-        #address
-        #fuel type
-        #access times
+      it "I should see the nearest fuel station" do
+        expect(page).to have_content('Name: Seventeenth Street Plaza')
+        expect(page).to have_content('Address: 1225 17th St., Denver, CO 80202')
+        expect(page).to have_content('Fuel Type: ELEC')
+        expect(page).to have_content('Access Times: MO: Not Specified; TU: Not Specified; WE: Not Specified; TH: Not Specified; FR: Not Specified; SA: Not Specified; SU: Not Specified')
       end
 
       xit "I should see route information to that station" do
