@@ -1,5 +1,5 @@
-<h1>Nearest Fuel Station to #{params[:location]}</h1>
-<p>Name: </p>
-<p>Address: </p>
-<p>Fuel Type: </p>
-<p>Access Times: </p>
+<h1>Nearest Fuel Station to <%= params[:location] %></h1>
+<p>Name: <%= search.station.name %></p>
+<p>Address: <%= search.station.address %></p>
+<p>Fuel Type: <%= search.station.fuel_type %> </p>
+<p>Access Times: <%= search.station.access_times %></p>
