@@ -19,10 +19,12 @@ RSpec.describe 'As a user' do
         expect(page).to have_content('Access Times: MO: Not Specified; TU: Not Specified; WE: Not Specified; TH: Not Specified; FR: Not Specified; SA: Not Specified; SU: Not Specified')
       end
 
-      xit "I should see route information to that station" do
-        #distance to station
-        #travel time
-        #directions to station
+      it "I should see route information to that station" do
+        expect(page).to have_content("Distance to Station: 0.1 mi")
+        expect(page).to have_content("Travel Time: 1 min")
+        expect(page).to have_content("Head southeast on 17th St toward Larimer St")
+        expect(page).to have_content("Turn left onto Lawrence St")
+        expect(page).to have_content("Destination will be on the left")
       end
     end
   end
