@@ -1,0 +1,12 @@
+<h1>Nearest Fuel Station to <%= params[:location] %></h1>
+<p>Name: <%= search.station.name %></p>
+<p>Address: <%= search.station.address %></p>
+<p>Fuel Type: <%= search.station.fuel_type %> </p>
+<p>Access Times: <%= search.station.access_times %></p>
+<h3>Route to Station</h3>
+<p>Distance to Station: <%= google.route.distance %></p>
+<p>Travel Time: <%= google.route.duration %></p>
+<h5>Directions: </h5>
+<% google.route.directions.each do |direction| %>
+  <p><%= direction['html_instructions'].html_safe%></p>
+<% end %>
